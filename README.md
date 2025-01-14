@@ -1,5 +1,6 @@
 # Arabic OCR (Optical Character Recognition)
 This project implements an Optical Character Recognition (OCR) system specifically for recognizing Arabic characters from scanned images. It utilizes machine learning models, including Support Vector Machines (SVM), Multi-layer Perceptron (MLP), and Naive Bayes classifiers, for accurate character recognition. The OCR process includes image preprocessing, segmentation, and classification, with evaluation metrics such as Word Error Rate (WER) and Character Error Rate (CER).
+
 ![Structure](src/assets/strucure.png)
 
 ## Features
@@ -53,3 +54,10 @@ These results were obtained by training and testing the models on a dataset of A
 
 ## Contributing
 Contributions are welcome! If you have any suggestions or improvements, please fork this repository and create a pull request.
+
+## References
+Here are useful papers for this task:
+1. [A Survey of OCR in Arabic Language: Applications, Techniques, and Challenges](https://www.mdpi.com/2076-3417/13/7/4584)
+2. [Printed Arabic Script Recognition: A Survey](https://www.researchgate.net/publication/327983209_Printed_Arabic_Script_Recognition_A_Survey)
+3. [Neural Networks Pipeline for Offline Machine Printed Arabic OCR](https://www.researchgate.net/publication/320679094_Neural_Networks_Pipeline_for_Offline_Machine_Printed_Arabic_OCR)
+4. [RECOGNITION OF ARABIC HANDWRITTEN CHARACTERS USING RESIDUAL NEURAL NETWORKS](https://www.researchgate.net/publication/351835426_RECOGNITION_OF_ARABIC_HANDWRITTEN_CHARACTERS_USING_RESIDUAL_NEURAL_NETWORKS?enrichId=rgreq-8a6b6d3a787acce4056fe22e24373bdb-XXX&enrichSource=Y292ZXJQYWdlOzM1MTgzNTQyNjtBUzoxMDcxMTUwMzE0NTU3NDQwQDE2MzIzOTM1NDQ5NzA%3D&el=1_x_3&_esc=publicationCoverPdf)
