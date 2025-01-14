@@ -57,6 +57,6 @@ def evaluate_all(output_folder, truth_folder):
         print('No valid pairs of output and ground truth files found.')
 
 if __name__ == "__main__":
-    output_folder = 'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\src\\output\\text'  # Path to the output folder
-    truth_folder = 'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\src\\truth'  # Path to the ground truth folder
+    output_folder = '..\\Arabic-OCR-master\\src\\output\\text'  # Path to the output folder
+    truth_folder = '..\\Arabic-OCR-master\\src\\truth'  # Path to the ground truth folder
     evaluate_all(output_folder, truth_folder)

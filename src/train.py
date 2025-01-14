@@ -17,6 +17,7 @@ import pickle
 
 chars = ['ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف',
 'ق','ك', 'ل', 'م', 'ن', 'ه', 'و','ي','لا']
+# The proportion of data used for training (80%)
 train_ratio = 0.8
 script_path = os.getcwd()
 classifiers = [ svm.LinearSVC(),
@@ -25,10 +26,12 @@ classifiers = [ svm.LinearSVC(),
                 GaussianNB()]
 
 names = ['LinearSVM', '1L_NN', '2L_NN', 'Gaussian_Naive_Bayes']
+# (1 = Skip , 0 = Train)
 skip = [1, 0, 1, 1]
 
 width = 25
 height = 25
+# Fixed dimensions
 dim = (width, height)
 
 
@@ -106,8 +109,8 @@ def read_data(limit=4000):
     print("For each char")
     for char in tqdm(chars, total=len(chars)):
         
-        folder = f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\Dataset\\{char}'
-        char_paths =  glob(f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\Dataset\\{char}\\*.png')
+        folder = f'..\\Arabic-OCR-master\\Dataset\\{char}'
+        char_paths =  glob(f'..\\Arabic-OCR-master\\Dataset\\{char}\\*.png')
 
         if os.path.exists(folder):
             os.chdir(folder)
@@ -157,11 +160,11 @@ def train():
             print(score)
 
             # Save the model
-            destination = f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\src\\models'
+            destination = f'..\\Arabic-OCR-master\\src\\models'
             if not os.path.exists(destination):
                 os.makedirs(destination)
             
-            location = f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\src\\models\\{names[idx]}.sav'
+            location = f'..\\Arabic-OCR-master\\src\\models\\{names[idx]}.sav'
             pickle.dump(clf, open(location, 'wb'))
 
 
@@ -172,7 +175,7 @@ def train():
 
 def test(limit=3000):
 
-    location = f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\src\\models\\{names[0]}.sav'
+    location = f'..\\Arabic-OCR-master\\src\\models\\{names[0]}.sav'
     clf = pickle.load(open(location, 'rb'))
      
     X = []
@@ -180,8 +183,8 @@ def test(limit=3000):
     tot = 0
     for char in tqdm(chars, total=len(chars)):
 
-        folder = f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\Dataset\\{char}'
-        char_paths =  glob(f'C:\\Users\\kenan\\Desktop\\Arabic-OCR-master\\Dataset\\{char}\\*.png')
+        folder = f'..\\Arabic-OCR-master\\Dataset\\{char}'
+        char_paths =  glob(f'..\\Arabic-OCR-master\\Dataset\\{char}\\*.png')
 
 
         if os.path.exists(folder):
