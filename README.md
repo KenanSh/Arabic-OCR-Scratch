@@ -1,6 +1,7 @@
 # Arabic OCR (Optical Character Recognition)
 This project implements an Optical Character Recognition (OCR) system specifically for recognizing Arabic characters from scanned images. It utilizes machine learning models, including Support Vector Machines (SVM), Multi-layer Perceptron (MLP), and Naive Bayes classifiers, for accurate character recognition. The OCR process includes image preprocessing, segmentation, and classification, with evaluation metrics such as Word Error Rate (WER) and Character Error Rate (CER).
-![Structure](src\assets\strucure.png)
+
+![Structure](src/assets/strucure.png)
 
 ## Features
 - **Preprocessing:** Converts images to grayscale, binarizes them, corrects skew, and expands images to improve recognition.
@@ -36,7 +37,9 @@ Each folder represents a different Arabic character and contains images of that 
 
 ## Evaluation Metrics
 The OCR system is evaluated using:
+
 **Word Error Rate (WER):** Measures the accuracy of the word-level prediction.
+
 **Character Error Rate (CER):** Measures the accuracy of the character-level prediction.
 
 ## Results
